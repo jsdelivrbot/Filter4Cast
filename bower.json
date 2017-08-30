@@ -1,9 +1,9 @@
 {
-  "name": "gyri",
+  "name": "Filter4Cast",
   "description": "IoT summer school Predix data access",
   "main": "index.js",
   "license": "GPL",
-  "homepage": "https://github.com/ansjin/predix_app_voc",
+  "homepage": "https://github.com/gyrrei/Filter4Cast",
   "ignore": [
     "**/.*",
     "node_modules",
