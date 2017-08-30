@@ -1,0 +1,45 @@
+{
+  "name": "px-code-editor",
+  "version": "2.0.1",
+  "description": "Code editor component that provides a lightweight wrapper around Ace Editor",
+  "main": [
+    "px-code-editor.html"
+  ],
+  "ignore": [
+    "*.enc",
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "sass",
+    "HISTORY.md",
+    "CONTRIBUTING.md",
+    "OSS_Notice.pdf",
+    "scripts",
+    ".github",
+    ".editorconfig",
+    ".jshintrc",
+    ".gitignore",
+    "LICENSE.md",
+    "gulpfile.js",
+    "monogram-wdmk.png",
+    "README.md",
+    "wct.conf.json"
+  ],
+  "dependencies": {
+    "polymer": "^1.9.0",
+    "js-beautify": "^1.6.8",
+    "iron-resizable-behavior": "^2.0.0"
+  },
+  "devDependencies": {
+    "px-theme": "^3.0.0",
+    "px-defaults-design": "^2.0.0",
+    "px-normalize-design": "^1.0.0",
+    "px-box-sizing-design": "^1.0.0",
+    "px-flexbox-design": "^1.0.0",
+    "px-buttons-design": "^2.0.0",
+    "px-demo": "^2.0.0"
+  },
+  "resolutions": {
+    "webcomponentsjs": "^0.7.24"
+  }
+}

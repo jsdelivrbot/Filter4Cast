@@ -1,0 +1,37 @@
+{
+  "name": "px-simple-chart-common-behavior",
+  "version": "2.0.0",
+  "main": [
+    "px-simple-chart-common-behavior.html"
+  ],
+  "ignore": [
+    "*.enc",
+    ".*",
+    "npm-debug.log",
+    "gulpfile.js",
+    "sass",
+    "bower_components",
+    "node_modules",
+    "test",
+    "OSS_Notice.pdf"
+  ],
+  "dependencies": {
+    "polymer": "^1.9.0",
+    "px": "~1.4.3",
+    "px-vis": "^3.0.0"
+  },
+  "devDependencies": {},
+  "resolutions": {
+    "webcomponentsjs": "^0.7.24"
+  },
+  "homepage": "https://github.com/predixDev/px-simple-chart-common-behavior",
+  "_release": "2.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.0.0",
+    "commit": "1cf48078320cd2fce88029479e418b7e258e2a64"
+  },
+  "_source": "https://github.com/predixDev/px-simple-chart-common-behavior.git",
+  "_target": "^2.0.0",
+  "_originalSource": "px-simple-chart-common-behavior"
+}

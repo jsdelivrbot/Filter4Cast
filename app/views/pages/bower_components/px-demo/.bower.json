@@ -1,0 +1,70 @@
+{
+  "name": "px-demo",
+  "version": "2.3.1",
+  "main": [
+    "px-demo.html"
+  ],
+  "ignore": [
+    "*.enc",
+    ".*",
+    "npm-debug.log",
+    "gulpfile.js",
+    "sass",
+    "bower_components",
+    "node_modules",
+    "test",
+    "OSS_Notice.pdf",
+    "scripts",
+    ".github",
+    "px-demo.png",
+    "*.md",
+    ".jshintrc",
+    ".editorconfig",
+    "wct.conf.json"
+  ],
+  "dependencies": {
+    "polymer": "^1.9.0",
+    "px-theme": "^3.0.0",
+    "px-dropdown": "^4.0.0",
+    "px-demo-snippet": "^1.0.0",
+    "px-api-viewer": "^1.0.0",
+    "px-tabs": "^2.0.0",
+    "px-demo-design": "^2.0.0",
+    "px-overlay": "^1.0.0",
+    "iron-a11y-keys": "^2.0.0",
+    "px-code-editor": "^2.0.0",
+    "px-view-header": "^1.0.0",
+    "px-deck-selector": "^2.0.0",
+    "px-typeahead": "^2.0.0",
+    "px-toggle": "^2.0.0"
+  },
+  "devDependencies": {
+    "px-forms-design": "^2.0.0",
+    "px-tables-design": "^2.0.0",
+    "px-icon-set": "^2.0.0",
+    "px-list-inline-design": "^1.0.0",
+    "px-toggle-design": "^2.0.0",
+    "px-headings-design": "^1.0.0",
+    "px-actionable-design": "^2.0.0",
+    "px-code-design": "^2.0.0",
+    "px-meta-lists-design": "^1.0.0",
+    "px-starter-kit-design": "^1.0.0",
+    "px-calendar-picker": "^1.0.0",
+    "iron-demo-helpers": "^2.0.0",
+    "px-buttons-design": "^2.0.0"
+  },
+  "resolutions": {
+    "webcomponentsjs": "^0.7.24"
+  },
+  "homepage": "https://github.com/PredixDev/px-demo",
+  "_release": "2.3.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.3.1",
+    "commit": "bd6d2074317c44d866357a7de9c94da90f91b787"
+  },
+  "_source": "https://github.com/PredixDev/px-demo.git",
+  "_target": "^2.3.1",
+  "_originalSource": "px-demo",
+  "_direct": true
+}

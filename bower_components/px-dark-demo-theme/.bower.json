@@ -1,0 +1,36 @@
+{
+  "name": "px-dark-demo-theme",
+  "version": "2.0.1",
+  "main": [
+    "px-dark-demo-theme.html"
+  ],
+  "ignore": [
+    "*.enc",
+    ".*",
+    "npm-debug.log",
+    "Gruntfile.js",
+    "sass",
+    "bower_components",
+    "node_modules",
+    "test",
+    "OSS_Notice.pdf"
+  ],
+  "dependencies": {
+    "polymer": "^1.9.0",
+    "px-colors-design": "^1.0.0"
+  },
+  "resolutions": {
+    "webcomponentsjs": "^0.7.24"
+  },
+  "homepage": "https://github.com/PredixDev/px-dark-demo-theme",
+  "_release": "2.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.0.1",
+    "commit": "3dc81dee9fdfdb0c0945afcd68d6d5a1ba263625"
+  },
+  "_source": "https://github.com/PredixDev/px-dark-demo-theme.git",
+  "_target": "^2.0.1",
+  "_originalSource": "px-dark-demo-theme",
+  "_direct": true
+}

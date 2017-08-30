@@ -1,0 +1,30 @@
+{
+  "name": "gyri",
+  "description": "IoT summer school Predix data access",
+  "main": "index.js",
+  "license": "GPL",
+  "homepage": "https://github.com/ansjin/predix_app_voc",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "px-starter-kit-design": "^1.0.1",
+    "px-spinner": "^2.0.4",
+    "px-gauge": "^2.0.2",
+    "px-vis": "^3.1.12",
+    "px-app-nav": "^2.0.6",
+    "px-card": "https://github.com/PredixDev/px-card.git#^1.0.8",
+    "px-simple-bar-chart": "^2.0.2",
+    "px-key-value-pair": "^1.0.2",
+    "px-vis-timeseries": "^3.1.2",
+    "px-dark-theme": "^2.0.14",
+    "px-dark-demo-theme": "^2.0.1",
+    "px-colors-design": "^1.0.4",
+    "px-demo": "^2.3.1",
+    "px-calendar-picker": "^1.0.7"
+  }
+}

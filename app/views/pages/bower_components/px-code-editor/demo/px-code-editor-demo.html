@@ -1,0 +1,154 @@
+<!-- Common imports -->
+<link rel="import" href="../../polymer/polymer.html" />
+<link rel="import" href="../../px-icon-set/px-icon-set.html" />
+
+<!-- Common demo imports -->
+<link rel="import" href="../../px-demo/px-demo-header.html" />
+<link rel="import" href="../../px-demo/px-demo-api-viewer.html" />
+<link rel="import" href="../../px-demo/px-demo-footer.html" />
+<link rel="import" href="../../px-demo/px-demo-configs.html" />
+<link rel="import" href="../../px-demo/px-demo-props.html" />
+<link rel="import" href="../../px-demo/px-demo-interactive.html" />
+<link rel="import" href="../../px-demo/px-demo-component-snippet.html" />
+<link rel="import" href="../../px-demo/css/px-demo-styles.html" />
+
+<!-- Imports for this component -->
+<link rel="import" href="../px-code-editor.html" />
+<link rel="import" href="../px-code-editor-converter.html" />
+
+<!-- Demo DOM module -->
+<dom-module id="px-code-editor-demo">
+  <template>
+    <style include="px-demo-styles" is="custom-style"></style>
+
+    <!-- Header -->
+    <px-demo-header
+        module-name="px-code-editor"
+        description="The px-code-editor component provides a rich, full-featured editor that can be embedded as a webcomponents and controlled through a simple attribute and event based API. Use it to provide an embedded code editor to users for editing JavaScript, HTML, CSS or other common languages. The editor is a wrapper around the open-source Ace Editor project.">
+    </px-demo-header>
+
+    <!-- Interactive -->
+    <px-demo-interactive>
+      <!-- Configs -->
+      <px-demo-configs configs="[[configs]]" props="{{props}}" chosen-config="{{chosenConfig}}"></px-demo-configs>
+
+      <!-- Props -->
+      <px-demo-props props="{{props}}" config="[[chosenConfig]]"></px-demo-props>
+
+      <!-- Component ---------------------------------------------------------->
+      <px-demo-component class="flex__item flex flex--col">
+        <div class="flex__item flex">
+          <px-code-editor
+              content="{{props.content.value}}"
+              language="{{props.language.value}}"
+              disable-linter="{{props.disableLinter.value}}"
+              enable-beautify="{{props.enableBeautify.value}}"
+              enable-save-to-update="{{props.enableSaveToUpdate.value}}"
+              reset-button-label="{{props.resetButtonLabel.value}}"
+              save-button-label="{{props.saveButtonLabel.value}}"
+              tab-size="{{props.tabSize.value}}"
+              flex-to-size="{{props.flexToSize.value}}">
+          </px-code-editor>
+        </div>
+      </px-demo-component>
+      <!-- END Component ------------------------------------------------------>
+
+      <px-demo-component-snippet
+          element-properties="{{props}}"
+          element-name="px-code-editor">
+      </px-demo-component-snippet>
+    </px-demo-interactive>
+
+    <!-- API Viewer -->
+    <px-demo-api-viewer source="px-code-editor"></px-demo-api-viewer>
+
+    <!-- Footer -->
+    <px-demo-footer></px-demo-footer>
+  </template>
+
+</dom-module>
+<script>
+  Polymer({
+    is: 'px-code-editor-demo',
+
+    properties: {
+
+      props: {
+        type: Object,
+        value: function(){ return this.demoProps; }
+      },
+
+      configs: {
+        type: Array,
+        value: function(){
+          return [
+            { configName: "Default",
+              configReset: true },
+            { configName: "Save to update",
+              configReset: true,
+              enableSaveToUpdate: true,
+              saveButtonLabel: "Save and Continue",
+              resetButtonLabel: "Cancel and Start Over" }
+          ]
+        }
+      }
+    },
+
+    demoProps: {
+      content: {
+        type: String,
+        defaultValue: 'function convertJSONToString(source) { try { return JSON.stringify(source); } catch (err) { return new Error("Unable to convert JSON: " + err.toString()); } }',
+        inputType: 'text'
+      },
+
+      language: {
+        type: String,
+        defaultValue: 'javascript',
+        inputChoices: ['javascript','html'],
+        inputType: 'dropdown'
+      },
+
+      disableLinter: {
+        type: Boolean,
+        defaultValue: false,
+        inputType: 'toggle'
+      },
+
+      enableBeautify: {
+        type: Boolean,
+        defaultValue: true,
+        inputType: 'toggle'
+      },
+
+      enableSaveToUpdate: {
+        type: Boolean,
+        defaultValue: false,
+        inputType: 'toggle'
+      },
+
+      resetButtonLabel: {
+        type: String,
+        defaultValue: 'Discard Changes',
+        inputType: 'text'
+      },
+
+      saveButtonLabel: {
+        type: String,
+        defaultValue: 'Save Changes',
+        inputType: 'text'
+      },
+
+      tabSize: {
+        type: String,
+        defaultValue: '2',
+        inputType: 'text'
+      },
+
+      flexToSize: {
+        type: Boolean,
+        defaultValue: true,
+        inputType: 'toggle'
+      }
+    }
+  });
+</script>

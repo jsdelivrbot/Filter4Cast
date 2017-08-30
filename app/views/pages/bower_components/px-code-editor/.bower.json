@@ -1,0 +1,55 @@
+{
+  "name": "px-code-editor",
+  "version": "2.0.1",
+  "description": "Code editor component that provides a lightweight wrapper around Ace Editor",
+  "main": [
+    "px-code-editor.html"
+  ],
+  "ignore": [
+    "*.enc",
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "sass",
+    "HISTORY.md",
+    "CONTRIBUTING.md",
+    "OSS_Notice.pdf",
+    "scripts",
+    ".github",
+    ".editorconfig",
+    ".jshintrc",
+    ".gitignore",
+    "LICENSE.md",
+    "gulpfile.js",
+    "monogram-wdmk.png",
+    "README.md",
+    "wct.conf.json"
+  ],
+  "dependencies": {
+    "polymer": "^1.9.0",
+    "js-beautify": "^1.6.8",
+    "iron-resizable-behavior": "^2.0.0"
+  },
+  "devDependencies": {
+    "px-theme": "^3.0.0",
+    "px-defaults-design": "^2.0.0",
+    "px-normalize-design": "^1.0.0",
+    "px-box-sizing-design": "^1.0.0",
+    "px-flexbox-design": "^1.0.0",
+    "px-buttons-design": "^2.0.0",
+    "px-demo": "^2.0.0"
+  },
+  "resolutions": {
+    "webcomponentsjs": "^0.7.24"
+  },
+  "homepage": "https://github.com/PredixDev/px-code-editor",
+  "_release": "2.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.0.1",
+    "commit": "91b8abc4765ea80a0cbd0dec2aec1e3b958b67a1"
+  },
+  "_source": "https://github.com/PredixDev/px-code-editor.git",
+  "_target": "^2.0.0",
+  "_originalSource": "px-code-editor"
+}

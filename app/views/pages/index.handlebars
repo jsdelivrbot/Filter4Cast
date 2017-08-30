@@ -1,0 +1,111 @@
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Filter4Sight Analysis Tool</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+
+        <div class="row">
+            <form role="form" method="get" action="" >
+                <div class="col-lg-2">
+
+                    <div class="form-group">
+                        <label>Please choose a lasercutter</label>
+                        <select name="feed_key" class="form-control" id="feed_key">
+                            <option value="co2">Lasercutter 1</option>
+                            <option value="co1">Lasercutter 2</option>
+                        </select>
+                    </div>
+                    
+                    
+                </div>
+   
+                <div class="col-lg-2" style="margin-top: 5px">
+                    <br>
+                <input type="button" class="btn btn-success" value="Submit" onclick="getNewDataPost()"></input>
+                </div>            
+                <div class="col-lg-2" style="margin-top: 5px">
+                    <br>
+                <input type="button" class="btn btn-success" value="Change filter now" onclick="changeFilter()"></input>
+                </div>
+                <div class="col-lg-2" style="margin-top: 5px">
+                    <br>
+                <input type="button" class="btn btn-success" value="Request new filter" onclick="sendMail()"></input>
+                </div>
+            </form>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="box box-success">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">TimeSeries Data </h3>
+
+                    </div>
+
+                <div class="chart">
+                    <!-- Sales Chart Canvas -->
+                    <div id="timeSeriesData" style="height: 50px;">
+                    </div>
+
+                </div>
+                <div class="overlay" id = "overlayInstanceId">
+
+                    <i class="fa fa-refresh fa-spin"></i>
+
+                </div>
+
+                <!-- /.chart-responsive -->
+            </div>
+
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</div>
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script>
+    function hideloader()
+    {  $("#overlayInstanceId").hide("slow")}
+    function getNewDataPost() {
+        $("#overlayInstanceId").show("fast");
+        $.post(
+                "/iot/getValuesFile",{
+                    "feed_key": document.getElementById("feed_key").value,
+                },
+                function (data) {
+                    console.log("" + data.plotValues);
+                    console.log("" + data.plotTimes);
+                    document.getElementById("timeSeriesData").innerHTML = "Last change of " + data.filterName + ": " + data.lastChange;
+                    document.getElementById("timeSeriesData").innerHTML += "<br>Filter fullness: " + data.filterpercentage + "%";
+                    document.getElementById("timeSeriesData").innerHTML += "<br>Please change filter in " + data.prediction  +" days!";
+
+
+                    $("#overlayInstanceId").hide("slow");
+                }
+        );
+    }
+    
+    function changeFilter() {
+        $("#overlayInstanceId").show("fast");
+        $.post(
+                "/iot/changeFilter",{
+                    "feed_key": document.getElementById("feed_key").value,
+                },function(data)
+            {console.log("updated");
+            document.getElementById("timeSeriesData").innerHTML = data.filterNr + ": Date of last filter change updated to: " + data.handover_date;
+            $("#overlayInstanceId").hide("slow");
+            }
+
+        );
+    }
+    
+     function sendMail() {
+         document.getElementById("timeSeriesData").innerHTML += "<br> Email sent to filtersupplier123@wearethebestsuppliers.com.";
+    }   
+    
+</script>
