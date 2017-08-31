@@ -7,11 +7,11 @@
 #  Step 2 - In later tutorials you will be shown how to **bind** to Predix services as described on predix.io
 
 applications:
-  - name: VOCast-WebApp # Step 1: Change your application name
+  - name: VOCast # Step 1: Change your application name
     buildpack: nodejs_buildpack
     memory: 512M
     command:  npm start
-    disk_quota: 256M
+    disk_quota: 512M
 env:
     node_env: cloud
     uaa_service_label : predix-uaa
