@@ -26,6 +26,6 @@
     "commit": "38036cb6b91aa9206ea020fd707ee727cd3ae2e9"
   },
   "_source": "https://github.com/components/es6-promise.git",
-  "_target": "~3.3.1",
+  "_target": "^3.3.1",
   "_originalSource": "es6-promise"
 }
