@@ -328,7 +328,9 @@
             </div>
              <!-- Chart -->
             <div class = "row">
-                <div id = "chart" style="height: 450px; width: 700px"></div>
+                <div class="col-md-12">
+                <div id = "chart" style="height: 450px; width: 100%"></div>
+            </div>        
                 <!-- /.row -->
             </div>
 
@@ -368,11 +370,11 @@
     function getNewDataPost() {
         $("#overlayInstanceId").show("fast");
         $.post(
-                "/iot/getValuesFile",{
-                    "feed_key": document.getElementById("feed_key").value,
+                "/iot/getTopTagspost",{
+                    "tag": "unternehmer-3dlaser-"+document.getElementById("feed_key").value,
                 },
                 function (data) {
-                    console.log("" + data.all[0]);
+                    console.log(data.all);
                     document.getElementById("timeSeriesData").innerHTML += "<br>Last change of " + data.filterName + ": " + data.lastChange;
                     document.getElementById("timeSeriesData").innerHTML += "<br>Filter fullness: " + data.filterpercentage + "%";
                     document.getElementById("timeSeriesData").innerHTML += "<br>Please change filter in " + data.prediction  +" days!";
@@ -389,7 +391,7 @@
                         zoomType: 'x'
                     },
                     title: {
-                        text: 'Accumulation of VOC in your filter over time'
+                        text: 'Accumulation of VOC in the filter over time'
                     },
                     subtitle: {
                         text: document.ontouchstart === undefined ?
@@ -439,7 +441,7 @@
                     series: [{
                         type: 'area',
                         name: 'Acc. VOC amount',
-                        data: data.plotValues
+                        data: data.all
                     }]
                 });
                     
